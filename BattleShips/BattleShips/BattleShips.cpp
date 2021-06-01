@@ -36,6 +36,11 @@ int main()
                 //First[i] is the grid line of how many slots.
                 //Second[j] is the amount of these grids.
                 char grid[10][10]
+
+            //Squid Grid
+                //First[i] is the grid line of how many slots.
+                //Second[j] is the amount of these grids.
+                char grid[8][8]
             //Selection System
                 Prototype:
                     Maybe use a switch that first lets you pick from the Hori than the Vert.
@@ -52,6 +57,15 @@ int main()
         Ship amount:
         -------------------
         //Might need to make a Ship Function File
+            Make so there is a 50/50 chance if they are turned vertical or horizontal.
+
+        Squids:         Size:
+        Large	    |   4
+        Medium	    |   3
+        Small	    |   2
+
+        Shoots      |   24
+
         Ship Class:     Size:
         Carrier	    |   5
 	    Battleship	|   4
