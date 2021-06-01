@@ -20,17 +20,34 @@ int main()
                 string array[10] gridH {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"}
                 string array[10] gridV {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
             Prototype:
-            //Horizontal A-J
+            //Horizontal ID A-J
                 cout << "[" << gridH[0] << "]" << "[" << gridH[1] << "]" << "[" << gridH[2] << "]" 
                      << "[" << gridH[3] << "]" << "[" << gridH[4] << "]" << "[" << gridH[5] << "]" 
                      << "[" << gridH[6] << "]" << "[" << gridH[7] << "]" << "[" << gridH[8] << "]" 
                      << "[" << gridH[9] << "]" << endl;
 		        
-            //Vertical 1-10
+            //Vertical ID 1-10 
                 cout << "[" << gridV[0] << "]" << "[" << gridV[1] << "]" << "[" << gridV[2] << "]" 
                      << "[" << gridV[3] << "]" << "[" << gridV[4] << "]" << "[" << gridV[5] << "]" 
                      << "[" << gridV[6] << "]" << "[" << gridV[7] << "]" << "[" << gridV[8] << "]" 
                      << "[" << gridV[9] << "]" << endl;
+
+            //Grid
+                //First[i] is the grid line of how many slots.
+                //Second[j] is the amount of these grids.
+                char grid[10][10]
+            //Selection System
+                Prototype:
+                    Maybe use a switch that first lets you pick from the Hori than the Vert.
+                    To declear where to places your shoots and where the ships will be.
+        First system
+        -------------------
+        * Make an AI for RNG placement of the ships
+        * Have the player than shoot for the placements of the ships with a set amount of shoots.
+        * Inspierd by Windwake battleship minigame.
+        * Link: https://www.youtube.com/watch?v=q_rQpf7yF9Y
+        * Insperation
+        * Link 2: https://www.youtube.com/watch?v=1hs451PfFzQ
         
         Ship amount:
         -------------------
