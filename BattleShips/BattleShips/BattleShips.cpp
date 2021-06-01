@@ -10,6 +10,36 @@ using namespace std;
 
 int main()
 {
+    //Large Grid
+    /*
+    string gridH[10] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+    string gridV[10] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+    */
+    char grid[8][8] = { {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'},
+    {'1','2','3','4','5','6','7','8'} };;
+
+    string gridH[8]{ "A", "B", "C", "D", "E", "F", "G", "H"};
+    string gridV[8]{ "1", "2", "3", "4", "5", "6", "7", "8"};
+
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+                cout << grid[i][j];
+        }
+        cout << endl;
+    }
+    int DebugStop;
+    cin >> DebugStop;
+
+    //cout << "[" << gridH[0] << "]" << "[" << gridH[1] << "]" << "[" << gridH[2] << "]" << "[" << gridH[3] << "]" << "[" << gridH[4] << "]" << "[" << gridH[5] << "]"<< "[" << gridH[6] << "]" << "[" << gridH[7] << "]" << endl;
+    //cout << "[" << gridV[0] << "]" << "[" << gridV[1] << "]" << "[" << gridV[2] << "]" << "[" << gridV[3] << "]" << "[" << gridV[4] << "]" << "[" << gridV[5] << "]"<< "[" << gridV[6] << "]" << "[" << gridV[7] << "]" << endl;
+    
+    
     /*
     Make an AI file.
     Make a base system file.
@@ -19,6 +49,7 @@ int main()
             One for Player and One for AI.
                 string array[10] gridH {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"}
                 string array[10] gridV {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}
+                string array[10] gridInfo {" ", " ", " ", " ", " ", " ", " ", " ", " ", " "}
             Prototype:
             //Horizontal ID A-J
                 cout << "[" << gridH[0] << "]" << "[" << gridH[1] << "]" << "[" << gridH[2] << "]" 
