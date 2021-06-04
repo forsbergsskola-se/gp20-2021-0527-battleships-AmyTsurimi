@@ -75,11 +75,6 @@ int main()
 	while (gameIsOn)
 	{
 		cout << "The Grid Number" << endl;
-		string gridNumber[3][3] = {
-			{ "[7]", "[8]", "[9]"},
-			{ "[4]", "[5]", "[6]"},
-			{ "[1]", "[2]", "[3]"} };
-
 		for (int g = 0; g < 3; g++) {
 			for (int r = 0; r < 3; r++) {
 				cout << gridNumber[g][r];
@@ -183,32 +178,15 @@ int main()
 		}
 		arrayDoubleSlotInt[PlayerGrid][PlayerRow] = 1;
 		arrayDoubleSlot[PlayerGrid][PlayerRow] = playerToken;
-		cout << "Player place its Token on " << gridNumber[PlayerGrid][PlayerRow] << endl;
+		for (int g = 0; g < 3; g++) {
+			for (int r = 0; r < 3; r++) {
+				cout << arrayDoubleSlot[g][r];
+			}
+			cout << endl;
+		}
 		cout << endl;
 
-		//------------------------------------------------------------------------------------------------------
-		cout << "AI's trun" << endl;
-		int AIrow = rand() % 3;
-		int AIgrid = rand() % 3;
-
-		while (arrayDoubleSlotInt[AIgrid][AIrow] >= 1) {
-			new int; AIrow = rand() % 3;
-			new int; AIgrid = rand() % 3;
-		}
-
-		arrayDoubleSlotInt[AIgrid][AIrow] = 4;
-		arrayDoubleSlot[AIgrid][AIrow] = AItoken;
-		cout << "AI place its Token on " << gridNumber[AIgrid][AIrow] << endl;
-
-
-		//------------------------------------------------------------------------------------------------------
 		int PlayerwinNumber[6];
-		int AIwinNumber[6];
-		int PlayerwinNumberD1 = 0;
-		int PlayerwinNumberD2 = 0;
-		int AIwinNumberD1 = 0;
-		int AIwinNumberD2 = 0;
-
 		//Horizontelt P1
 		PlayerwinNumber[0] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[0][2];
 		PlayerwinNumber[1] = arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[1][2];
@@ -218,17 +196,8 @@ int main()
 		PlayerwinNumber[4] = arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[2][1];
 		PlayerwinNumber[5] = arrayDoubleSlotInt[0][2] + arrayDoubleSlotInt[1][2] + arrayDoubleSlotInt[2][2];
 
-		//Horizontelt CPU
-		AIwinNumber[0] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[0][2];
-		AIwinNumber[1] = arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[1][2];
-		AIwinNumber[2] = arrayDoubleSlotInt[2][0] + arrayDoubleSlotInt[2][1] + arrayDoubleSlotInt[2][2];
-		//Verticalt CPU
-		AIwinNumber[3] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[2][0];
-		AIwinNumber[4] = arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[2][1];
-		AIwinNumber[5] = arrayDoubleSlotInt[0][2] + arrayDoubleSlotInt[1][2] + arrayDoubleSlotInt[2][2];
-		
-		for (int i = 0; i <7; i++) {
-			
+		for (int i = 0; i < 7; i++) {
+
 			if (PlayerwinNumber[i] == 3) {
 				cout << "Player Wins!" << endl;
 				cout << endl;
@@ -247,7 +216,24 @@ int main()
 				gameIsOn = false;
 				break;
 			}
-			//------------------------------------------------------------------------------------------------------
+		}
+		i = 0;
+
+		//------------------------------------------------------------------------------------------------------
+		cout << "AI's trun" << endl;
+		int AIrow = rand() % 3;
+		int AIgrid = rand() % 3;
+
+		while (arrayDoubleSlotInt[AIgrid][AIrow] >= 1) {
+			new int; AIrow = rand() % 3;
+			new int; AIgrid = rand() % 3;
+		}
+
+		arrayDoubleSlotInt[AIgrid][AIrow] = 4;
+		arrayDoubleSlot[AIgrid][AIrow] = AItoken;
+		cout << "AI place its Token on " << gridNumber[AIgrid][AIrow] << endl;
+
+		for (int i = 0; i <7; i++) {
 			if (PlayerwinNumber[i] == 12) {
 				cout << "AI Wins!" << endl;
 				cout << endl;
