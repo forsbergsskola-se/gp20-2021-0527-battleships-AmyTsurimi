@@ -1,6 +1,3 @@
-// TicTacToe.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -70,7 +67,7 @@ int main()
 				cout << endl;
 			}
 		}
-	start = false; // Need to fix the First time roll.
+	start = false;
 
 	while (gameIsOn)
 	{
@@ -186,19 +183,19 @@ int main()
 		}
 		cout << endl;
 
-		int PlayerwinNumber[6];
+		int winStatment[6];
 		//Horizontelt P1
-		PlayerwinNumber[0] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[0][2];
-		PlayerwinNumber[1] = arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[1][2];
-		PlayerwinNumber[2] = arrayDoubleSlotInt[2][0] + arrayDoubleSlotInt[2][1] + arrayDoubleSlotInt[2][2];
+		winStatment[0] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[0][2];
+		winStatment[1] = arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[1][2];
+		winStatment[2] = arrayDoubleSlotInt[2][0] + arrayDoubleSlotInt[2][1] + arrayDoubleSlotInt[2][2];
 		//Verticalt P1
-		PlayerwinNumber[3] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[2][0];
-		PlayerwinNumber[4] = arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[2][1];
-		PlayerwinNumber[5] = arrayDoubleSlotInt[0][2] + arrayDoubleSlotInt[1][2] + arrayDoubleSlotInt[2][2];
+		winStatment[3] = arrayDoubleSlotInt[0][0] + arrayDoubleSlotInt[1][0] + arrayDoubleSlotInt[2][0];
+		winStatment[4] = arrayDoubleSlotInt[0][1] + arrayDoubleSlotInt[1][1] + arrayDoubleSlotInt[2][1];
+		winStatment[5] = arrayDoubleSlotInt[0][2] + arrayDoubleSlotInt[1][2] + arrayDoubleSlotInt[2][2];
 
 		for (int i = 0; i < 7; i++) {
 
-			if (PlayerwinNumber[i] == 3) {
+			if (winStatment[i] == 3) {
 				cout << "Player Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
@@ -234,7 +231,7 @@ int main()
 		cout << "AI place its Token on " << gridNumber[AIgrid][AIrow] << endl;
 
 		for (int i = 0; i <7; i++) {
-			if (PlayerwinNumber[i] == 12) {
+			if (winStatment[i] == 12) {
 				cout << "AI Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
