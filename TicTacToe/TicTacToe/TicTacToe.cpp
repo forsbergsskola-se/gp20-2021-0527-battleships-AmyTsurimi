@@ -199,19 +199,22 @@ int main()
 				cout << "Player Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 			if (arrayDoubleSlotInt[0][0] == 1 && arrayDoubleSlotInt[1][1] == 1 && arrayDoubleSlotInt[2][2] == 1) {
 				cout << "Player Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 			if (arrayDoubleSlotInt[2][0] == 1 && arrayDoubleSlotInt[1][1] == 1 && arrayDoubleSlotInt[0][2] == 1) {
 				cout << "Player Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 		}
 		i = 0;
@@ -235,22 +238,27 @@ int main()
 				cout << "AI Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 			if (arrayDoubleSlotInt[0][0] == 4 && arrayDoubleSlotInt[1][1] == 4 && arrayDoubleSlotInt[2][2] == 4) {
 				cout << "AI Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 			if (arrayDoubleSlotInt[2][0] == 4 && arrayDoubleSlotInt[1][1] == 4 && arrayDoubleSlotInt[0][2] == 4) {
 				cout << "AI Wins!" << endl;
 				cout << endl;
 				gameIsOn = false;
-				break;
+				goto endGame;
+				
 			}
 		}
 		i = 0;
 		cout << endl;
 	}
+endGame:
+	cout << endl;
 }
