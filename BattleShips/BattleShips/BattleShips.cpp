@@ -10,24 +10,9 @@
 
 using namespace std;
 
-int main()
-{
-    //Large Grid
-    /*
-    string gridH[10] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
-    string gridV[10] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-    */
-    //First is the Amount or Rows
-    //The Amount in a Row
-    //Prototype
-
-
-
-
+void grid() {
     string Hit = "[ * ]";
     string Miss = "[ : ]";
-
-    
     string gridRadar[11][11] = {
     {"[   ]","[ A ]","[ B ]","[ C ]","[ D ]","[ E ]","[ F ]","[ G ]","[ H ]","[ I ]","[ J ]"},
     {"[ 0 ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]"},
@@ -41,8 +26,6 @@ int main()
     {"[ 8 ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]"},
     {"[ 9 ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]","[   ]"}
     };
-    cout << "Battleships" << endl;
-    srand(time(0));
     cout << "Grid Radar" << endl;
     for (int i = 0; i < 11; i++) {
         for (int j = 0; j < 11; j++) {
@@ -50,12 +33,44 @@ int main()
         }
         cout << endl;
     }
+}
+void gridCoordinates() {
+    
+}
+
+int main()
+{
+    cout << "Battleships" << endl;
+    srand(time(0));
+   
+    int gridCint[10][11] = {
+    {0,0,0,0,0,0,0,0,0,0,0},
+    {1,0,0,0,0,0,0,0,0,0,0},
+    {2,0,0,0,0,0,0,0,0,0,0},
+    {3,0,0,0,0,0,0,0,0,0,0},
+    {4,0,0,0,0,0,0,0,0,0,0},
+    {5,0,0,0,0,0,0,0,0,0,0},
+    {6,0,0,0,0,0,0,0,0,0,0},
+    {7,0,0,0,0,0,0,0,0,0,0},
+    {8,0,0,0,0,0,0,0,0,0,0},
+    {9,0,0,0,0,0,0,0,0,0,0},
+    };
+    
+    grid();
+    cout << gridCint[4][2] << endl;
+
+    gridCoordinates();
     cout << endl;
     cout << "What coordinates do you want to shoot?" << endl;
-    string coordinates;
-    cin >> coordinates;
-    cout << coordinates[0] << coordinates[1] << endl;
     
+    cout << "What vertical do you want to be on 0-9?" << endl;
+    int vLine;
+    cin >> vLine;
+    cout << "What horizontal do you want to shoot at A-J or Back?" << endl;
+    int hLine;
+    cin >> hLine;
+
+
     //Maybe use Vector as the input for the grid.
     //Add if they want to know the rulls.
     //Add who to start. Roll for it.
@@ -65,6 +80,12 @@ int main()
 
 
     /*
+    string coordinates;
+    cin >> coordinates;
+    if (coordinates.find("A")) {
+        cout << "A been selected" << endl;
+    }
+
     string gridPossition[11][11] = {
     {"[   ]","[ A ]","[ B ]","[ C ]","[ D ]","[ E ]","[ F ]","[ G ]","[ H ]","[ I ]","[ J ]"},
     {"[ 1 ]","[A 1]","[B 1]","[C 1]","[D 1]","[E 1]","[F 1]","[G 1]","[H 1]","[I 1]","[J 1]"},
