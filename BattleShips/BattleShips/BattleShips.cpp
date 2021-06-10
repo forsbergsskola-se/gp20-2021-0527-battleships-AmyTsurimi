@@ -5,6 +5,8 @@
 #include <cmath>
 #include <iostream>
 #include <string>
+#include <vector>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -41,15 +43,6 @@ int main()
     };
     cout << "Battleships" << endl;
     srand(time(0));
-    cout << "What vertical do you want to be on 0-9?" << endl;
-    int vLine;
-    cin >> vLine;
-    cout << "What horizontal do you want to shoot at A-J or Back?" << endl;
-    string hLine;
-    cin >> hLine;
-    //Add if they want to know the rulls.
-    //Add who to start. Roll for it.
-    cout << endl;
     cout << "Grid Radar" << endl;
     for (int i = 0; i < 11; i++) {
         for (int j = 0; j < 11; j++) {
@@ -57,6 +50,15 @@ int main()
         }
         cout << endl;
     }
+    cout << endl;
+    cout << "What coordinates do you want to shoot?" << endl;
+    string coordinates;
+    cin >> coordinates;
+    cout << coordinates[0] << coordinates[1] << endl;
+    
+    //Maybe use Vector as the input for the grid.
+    //Add if they want to know the rulls.
+    //Add who to start. Roll for it.
     int DebugStop;
     cin >> DebugStop;
 
